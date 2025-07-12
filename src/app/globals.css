@@ -1,11 +1,15 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+@import "tw-animate-css"; /* not required unless you're using it */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
 
 html,
 body,
-:root{
+:root {
   height: 100vh;
 }
 
@@ -125,4 +129,7 @@ body,
   body {
     @apply bg-background text-foreground;
   }
+}
+html {
+  scroll-behavior: smooth;
 }
